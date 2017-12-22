@@ -4,7 +4,9 @@
   "description": "A website for today.",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/kochie/today/issues"
   },
-  "homepage": "https://github.com/kochie/today#readme"
+  "homepage": "https://github.com/kochie/today#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "moment": "^2.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.1"
+  }
 }
