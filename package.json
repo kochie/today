@@ -1,0 +1,22 @@
+{
+  "name": "today",
+  "version": "0.0.1",
+  "description": "A website for today.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kochie/today.git"
+  },
+  "keywords": [
+    "memes"
+  ],
+  "author": "robert@kochie.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kochie/today/issues"
+  },
+  "homepage": "https://github.com/kochie/today#readme"
+}
