@@ -2,12 +2,26 @@
 <html>
 	<head>
 		<title>Kochie Today</title>
+
+		<style>
+			.container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				align-content: center;
+				height: 100vh;
+				text-align: center;
+			}
+		</style>
 	</head>
 	<body>
-		<h1 id="heading"></h1>
-		<p>
-			Come back tomorrow so I can blow your mind again.
-		</p>
+		<div class="container">
+			<h1 id="heading"></h1>
+			<p>
+				Come back tomorrow so I can blow your mind again.
+			</p>
+		</div>
 		<script>
 			fetch("api/v1/today").then((res) => {return res.text()}).then((text)=>{document.getElementById("heading").innerHTML = `"${text}" - Robert Koch`})	
 		</script> 

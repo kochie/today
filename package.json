@@ -6,7 +6,8 @@
   "scripts": {
     "test": "ava",
     "start": "node ./index.js",
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+	"deploy": "now ln set $(now) kochie.today"
   },
   "repository": {
     "type": "git",
