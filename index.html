@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Robert Today</title>
+		<title>Kochie Today</title>
 	</head>
 	<body>
-		<h1 id="heading">
-		
-		</h1>
+		<h1 id="heading"></h1>
+		<p>
+			Come back tomorrow so I can blow your mind again.
+		</p>
 		<script>
 			fetch("api/v1/today").then((res) => {return res.text()}).then((text)=>{document.getElementById("heading").innerHTML = `"${text}" - Robert Koch`})	
 		</script> 
