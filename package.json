@@ -7,7 +7,7 @@
     "test": "ava",
     "start": "node ./index.js",
     "dev": "nodemon ./index.js",
-	"deploy": "now ln set $(now) kochie.today"
+    "deploy": "now ln set $(now) kochie.today"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/kochie/today#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "moment": "^2.20.1"
+    "luxon": "^0.2.9"
   },
   "devDependencies": {
     "nodemon": "^1.14.1"

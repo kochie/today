@@ -1,16 +1,18 @@
 const words = require('./weirdThingsISay.json');
-const moment = require('moment');
+const luxon = require('luxon');
 
-let lastRequest = moment();
-let quote = words[Math.floor(Math.random()*words.length)];
+let lastRequest = luxon.DateTime.local().setZone('Australia/Melbourne');
+let quote = words[Math.floor(Math.random() * words.length)];
 
 const sendTheWords = (req, res) => {
-	if (moment.duration(moment().diff(lastRequest)).asDays() > 1) {
-		lastRequest = moment();
-		quote = words[Math.floor(Math.random()*words.length)];
-	}
+  let thisRequest = luxon.DateTime.local().setZone('Australia/Melbourne');
 
-	res.send(quote)
-}
+  if (thisRequest.toLocaleString() !== lastRequest.toLocaleString()) {
+    quote = words[Math.floor(Math.random() * words.length)];
+  }
 
-module.exports = sendTheWords
+  lastRequest = thisRequest;
+  res.send(quote);
+};
+
+module.exports = sendTheWords;
